@@ -1,5 +1,11 @@
 #include<stdio.h>
-int main(void)/*this is the main fuction*/
+/**
+ * main - function
+ *
+ *
+ * Return: 0
+ */
+int main(void)
 {
 	char *calling = "Programming is like building a multilingual puzzle";
 
