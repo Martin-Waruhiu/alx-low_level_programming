@@ -1,8 +1,7 @@
 #include<stdio.h>
-/*this is the main fuction*/
-int main(void)
+int main(void)/*this is the main fuction*/
 {
-	char *calling = "'Programming is like building a multilingual puzzle";
+	char *calling = "Programming is like building a multilingual puzzle";
 
 
 	puts(calling);
