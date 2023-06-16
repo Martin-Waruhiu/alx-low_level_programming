@@ -2,7 +2,7 @@
 /**
  * main - function
  *
- * printCombinations: - to combine
+ * printCombinations: 0
  * Return: 0
  */
 void printCombinations(void)
@@ -15,7 +15,7 @@ void printCombinations(void)
 		{
 			putchar('0' + i);
 			putchar('0' + j);
-	if(i < 8 || j < 9)
+	if (i < 8 || j < 9)
 	putchar(',');
 	putchar(' ');
 		}
