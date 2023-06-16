@@ -25,12 +25,11 @@ void printCombinations(void)
 		}
 	}
 	if (i != 7 || j != 8 || k != 9)
-		putchar(',');
-		putchar(' ');
+	putchar(',');
+	putchar(' ');
+}
 int main(void)
 {
-	/*Calling function*/
 	printCombinations();
 	return (0);
-}
 }
