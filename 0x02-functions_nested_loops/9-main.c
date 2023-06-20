@@ -3,7 +3,7 @@
  *
  * Return: Always 0.
  */
-void times_table(void);
+void times_tables(void);
 
 int main(void)
 {
