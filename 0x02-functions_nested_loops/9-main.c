@@ -3,10 +3,10 @@
  *
  * Return: Always 0.
  */
-void times_tables(void);
+void times_table(void);
 
 int main(void)
 {
-	times_tables();
+	times_table();
 	return (0);
 }
