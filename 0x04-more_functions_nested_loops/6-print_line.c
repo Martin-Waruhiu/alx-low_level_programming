@@ -3,6 +3,7 @@
 /**
  * print_line - function to print line
  *@n: integer to be checked
+ *
  */
 
 void print_line(int n)
