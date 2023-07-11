@@ -46,6 +46,7 @@ int **alloc_grid(int width, int height)
 			greed[i][j] = 0;
 		}
 	}
+	free(ptr);
 	return (greed);
 	return (0);
 }
