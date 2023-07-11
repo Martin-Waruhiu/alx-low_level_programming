@@ -25,6 +25,11 @@ char *str_concat(char *s1, char *s2)
 		strcat(s3, s1);
 		strcat(s3, s2);
 	}
+	if (s1 == NULL || s2 == NULL)
+	{
+		strcat(s3, s1);
+		strcat(s3, s2);
+	}
 	return (s3);
 	free(s3);
 }
