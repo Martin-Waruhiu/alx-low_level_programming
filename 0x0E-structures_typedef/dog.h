@@ -4,11 +4,13 @@
 
 /**
  * struct dog - data type struct of a dog
+ *
  * @name: name of dog
  * @age: age of dog
- * @owner: owner of dog
+ * @owner: owner of e
+ *
+ * description: this is a description
  */
-
 struct dog
 {
 	char *name;
@@ -19,12 +21,8 @@ struct dog
 };
 
 /**
- * dog - alias for struct dog
+ * dog_t - typedef for struct dog
  */
-
-typedef struct dog dog;
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
+typedef struct dog dog_t;
 
 #endif
