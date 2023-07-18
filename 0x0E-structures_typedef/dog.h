@@ -19,10 +19,10 @@ struct dog
 };
 
 /**
- * doggie - alias for struct dog
+ * dog - alias for struct dog
  */
 
-typedef struct dog doggie;
+typedef struct dog dog;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
