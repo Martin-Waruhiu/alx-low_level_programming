@@ -8,13 +8,13 @@
 
 void free_list(list_t *head)
 {
-	list *ptrr;
+	list_t *ptrr;
 
 	while (head)
 	{
 		ptrr = head->next;/*store next node temporarily*/
-		free(str);
+		free(head->str);
 		free(head);/**we wont loose next node its stored*/
-		ptrr = head;
+		head  = ptrr;
 	}
 }
