@@ -14,7 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	unsigned int len = 0;
 
-	while(str[len])
+	while (str[len])
 		len++;
 
 	/*allocate memory for new node*/
