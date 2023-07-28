@@ -10,7 +10,7 @@
  * @len: lengthof str
  * @next: points tonext
  *
- * Description:  linked list  structure
+ * Description:  linked list 
  */
 typedef struct list_s
 {
