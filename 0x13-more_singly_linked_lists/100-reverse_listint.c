@@ -2,9 +2,11 @@
 
 
 /**
- * reverse_listint
+ * reverse_listint - func to reverse
  * @head: poimter to node s
  * Return: head
+ *
+ *
  */
 
 
