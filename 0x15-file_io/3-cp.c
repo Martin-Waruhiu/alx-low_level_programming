@@ -55,16 +55,18 @@ int main(int argc, char *argv[])
 {
 	int fp1, fp2, j, k;
 	char *buffer;
-
+	/*check if the rgument account is three*/
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
+	/*call the buffer and pass the second file to copy to*/
 	buffer = create_buffer(argv[2]);
+	/*open the source file and read it according to buffer*/
 	fp1 = open(argv[1], O_RDONLY);
-	j = read(fp1, buffer, 1024);
+	j = read(fp1, buffer, 1024); /*returns bytes read*/
+	/*create the destination file*/
 	fp2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -76,8 +78,9 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
+		/*writing to our destination file*/
 		k = write(fp2, buffer, j);
-		if (fp2 == -1 || k == -1)
+		if (fp2 == -1 || k == -1) /*check if succesful*/
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
@@ -88,7 +91,7 @@ int main(int argc, char *argv[])
 		j = read(fp1, buffer, 1024);
 		fp2 = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (j > 0);
+	} while (j > 0); /*until end of file*/
 
 	free(buffer);
 	closing_file(fp1);
