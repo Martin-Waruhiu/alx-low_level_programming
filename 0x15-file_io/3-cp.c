@@ -20,18 +20,18 @@ int main(int argc, char *argv[])
 		exit(97);
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	}
-	else
-	{
 		buffer = create_buffer(argv[2]);
 		fp1 = open(argv[1], O_RDONLY);
 		x = read(fp1, buffer, 1024);
-		if (fp1 == -1 || x == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			free(buffer);
-			exit(98);
-		}
 		fp2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+		do {
+
+			if (fp1 == -1 || x == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+				free(buffer);
+				exit(98);
+			}
 		k = write(fp2, buffer, 1024);
 		if (fp2 == -1 || k == -1)
 		{
@@ -39,7 +39,9 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-	}
+		x = read(fp1, buffer, 1024);
+		fp2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	} while (x > 0);
 	free(buffer);
 	closing_file(fp1);
 	closing_file(fp2);
