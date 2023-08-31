@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * flip_bits - number 
+ * flip_bits - number
  * @n: 1st num
  * @m: 2ndd num
- *
  * Return: bt s to change
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
