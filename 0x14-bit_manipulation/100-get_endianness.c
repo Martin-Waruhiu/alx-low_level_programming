@@ -3,7 +3,7 @@
 /**
  * get_endianness - inds out if a little or big endian
  * Return: large, 1 small
- * */
+ */
 int get_endianness(void)
 {
 	unsigned int zz = 1;
