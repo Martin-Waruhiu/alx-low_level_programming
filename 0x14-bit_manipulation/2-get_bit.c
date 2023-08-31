@@ -3,7 +3,7 @@
 /**
  * get_bit - gets value of  bit at a certain  i dex
  * @n: the numm
- * @index: index 
+ * @index: index
  *
  * Return: the bit vall
  */
