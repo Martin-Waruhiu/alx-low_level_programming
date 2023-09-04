@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 	buffA = make_buffer(argv[2]);
 	f = open(argv[1], O_RDONLY);
-	x = read(from, buffA, 1024);
+	x = read(f, buffA, 1024);
 	t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 
 	free(buffA);
 	exit_file(f);
-	exit_file(o);
+	exit_file(t);
 
 	return (0);
 }
